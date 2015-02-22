@@ -7,11 +7,9 @@
         <%= javascript_include_tag 'tanzil', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
     </head>
-    <body style="background-position: 400px 0px;">
+    <body style="background-position: 250px 0px;">
 
         <div class="container" id="container" style="margin-left: 376px;">
-            <div id="body-content" class="ui-helper-clearfix">
-                <div id="main-content" class="floatEnd">
                     <div id="quran-tab" class="main-tab quran" style="font-size: 19px; display: block; margin:auto 0;">
                         <div class="quranPageHeader ui-helper-clearfix">
                             <div style="float: left; width: 180px; text-align: left;"><span id="suraName">سورة مريم</span></div>
@@ -37,8 +35,6 @@
                             <a class="arrow-link arrow-right" href="javascript:changePage('right')" original-title="">►</a>
                         </div>
                     </div>
-                </div>
-            </div>
             <div class="column-right"><%= yield :atks_sarf %></div>
             <div class="column-left"></div>
         </div>
