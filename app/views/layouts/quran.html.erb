@@ -9,7 +9,8 @@
     </head>
     <body style="background-position: 400px 0px;">
 
-        <div class="container" id="container" style="margin-left: 376px;">
+        <div id="side-content" class="floatEnd"><%= yield :atks_sarf %></div>
+        <div class="container" id="container" style="margin-left: 376px; overflow: hidden;">
             <div id="main-content" class="floatEnd">
                 <div id="quran-tab" class="main-tab quran" style="font-size: 19px; display: block; margin:auto 0;">
                     <div class="quranPageHeader ui-helper-clearfix">
@@ -37,8 +38,6 @@
                     </div>
                 </div>
             </div>
-            <div id="side-content" class="floatEnd"><%= yield :atks_sarf %></div>
-            <div class="column-left"></div>
         </div>
 
     </body>
