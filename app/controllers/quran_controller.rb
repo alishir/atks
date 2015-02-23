@@ -12,7 +12,7 @@ class QuranController < ApplicationController
     @nextPageSura = quran_data.search("page[index=\"#{nextPage}\"]").first['sura']
     @nextPageAya = quran_data.search("page[index=\"#{nextPage}\"]").first['aya']
 
-    sura1 = quran.search('sura[index="1"]')
+    sura1 = quran.search("sura[index=\"#{sura}\"]")
     @ayat = sura1.xpath('aya/@text')
   end
 end
