@@ -96,8 +96,7 @@ input[type=checkbox],input[type=radio] {
 
 #body-content {
   width: 768px;
-  background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwAAAAAKCAMAAAA0LMlHAAAABGdBTUEAAK/
-INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAJUExURf////v7+8zMzAKvyZAAAAA4SURBVHja7NNBEQAACAOgaf/QZvC7gw5kamzgTQAEEAABBEAAARBAAAQQAAEEQAABEEAAGp0AAwCcnAf5+i892QAAAABJRU5ErkJggg==) repeat-y;
+  background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwAAAAAKCAMAAAA0LMlHAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAJUExURf////v7+8zMzAKvyZAAAAA4SURBVHja7NNBEQAACAOgaf/QZvC7gw5kamzgTQAEEAABBEAAARBAAAQQAAEEQAABEEAAGp0AAwCcnAf5+i892QAAAABJRU5ErkJggg==) repeat-y;
 }
 
 #side-content {
@@ -989,11 +988,11 @@ a.tip-close:hover,a.tbox-close:hover {
   color: #4682b4;
 }
 
-#page-tab .selected a,#page-tab .selected a:
-hover {
-  background: white;
-  color: blue;
+#page-tab .selected a,#page-tab .selected a:hover {
+    background:white;
+    color:blue
 }
+
 
 .ui-helper-clearfix:after {
   content: ".";
