@@ -3,18 +3,18 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 paintIt = (element, backgroundColor, textColor) ->
-  console.log($(".ayaWord[data-selected-background-color]"))
-  for word in $(".ayaWord[data-selected-background-color]")
-    word.style.backgroundColor = $(word).data("original-background-color")
+  console.log($(".ayaWord[data-selected-bg-color]"))
+  for word in $(".ayaWord[data-selected-bg-color]")
+    word.style.backgroundColor = $(word).data("original-bg-color")
   element.style.backgroundColor = backgroundColor
   if textColor?
     element.style.color = textColor
 
 
 $ ->
-  $(".ayaWord[data-selected-background-color]").click (e) ->
+  $(".ayaWord[data-selected-bg-color]").click (e) ->
     e.preventDefault()
-    backgroundColor = $(this).data("selected-background-color")
+    backgroundColor = $(this).data("selected-bg-color")
     textColor = $(this).data("text-color")
     paintIt(this, backgroundColor, textColor)
 
