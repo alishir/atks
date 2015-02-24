@@ -16,4 +16,11 @@ class QuranController < ApplicationController
     @sura = reqSura
     @ayat = sura1.xpath('aya').select{|aya| aya['index'].to_i < @nextPageAya.to_i && aya['index'].to_i >= reqAya}
   end
+
+  def fetch_info
+    @result = "some random result" + params[:word]
+    respond_to do |format|
+      format.js
+    end
+  end
 end

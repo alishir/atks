@@ -1,1 +1,4 @@
-<span id="<%= id %>" class="ayaWord" data-background-color="#559944"><%= word.to_s %></span>
+<span id="<%= id %>" class="ayaWord" data-background-color="#559944">
+  <%= link_to word.to_s, fetch_info_path(:word => word), :remote => true %>
+  <!--<%= word.to_s %>-->
+</span>

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'quran#view'
+  get '/fetch_info' => 'quran#fetch_info', as: 'fetch_info'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
