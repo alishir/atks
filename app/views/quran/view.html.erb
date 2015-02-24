@@ -1,11 +1,13 @@
 <% content_for :quran_text do %>
     <% @ayat.each do |aya| %>
-        <span id="<%= @sura.to_s + '-' + aya['index'] %> class="aya">
+        <% aya_id = @sura.to_s + '-' + aya['index'] %>
+        <span id="<%= aya_id %>" class="aya">
             <span class="aya-wrapper" style="background-color: transparent;">
                 <span class="ayaText">
                   <!--<%= aya['text'] %>-->
                   <% aya['text'].split(/\s+/).each_with_index do |word, windex| %>
-                    <span id="<%= @sura.to_s + '-' + aya['index'] + '-' + windex.to_s %>" class="ayaWord" data-background-color="#990000"><%= word.to_s %></span>
+                      <% wordId = @sura.to_s + '-' + aya['index'] + '-' + windex.to_s %>
+                    <span id="<%= wordId %>" class="ayaWord" data-background-color="#559944"><%= word.to_s %></span>
                   <% end %>
                 </span>
                 <span class="ayaNumber" style="font-size: 0.92em;">﴿<a href="http://tanzil.net/#19:2"><%= aya['index'] %></a>﴾</span>
