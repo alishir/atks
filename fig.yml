@@ -5,3 +5,5 @@ web:
     - .:/usr/src/atks
   ports:
     - 3000:3000
+  environment:
+    - ATKS_API_KEY
