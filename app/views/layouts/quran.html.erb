@@ -12,45 +12,23 @@
 
         <%= csrf_meta_tags %>
     </head>
-    <body style="background-position: 400px 0px;">
+    <body>
 
+        <!--
         <div id="side-content" class="floatEnd">
           <%= yield :page_meta %>
         </div>
+        -->
 
         <!--AJAX + Partial-->
         <div id="sarf-content" class="floatEnd">
           <!--<%= yield :atks_sarf %>-->
         </div>
 
-        <div class="container" id="container" style="margin-left: 376px; overflow: hidden;">
-            <div id="main-content" class="floatEnd">
-                <div id="quran-tab" class="main-tab quran" style="font-size: 19px; display: block; margin:auto 0;">
-                    <div class="quranPageHeader ui-helper-clearfix">
-                        <div style="float: left; width: 180px; text-align: left;"><span id="suraName">سورة مريم</span></div>
-                        <div style="float: left; width: 130px;">
-                            <a class="arrow-link arrow-left" href="javascript:changePage('left')" original-title="">◄</a>
-                            &nbsp;<span class="pageNumber">٣٠٥</span>&nbsp;
-                            <a class="arrow-link arrow-right" href="javascript:changePage('right')" original-title="">►</a>
-                        </div>
-                        <div style="float: right"><span id="juzName">الجزء السادس عشر</span> </div>
-                    </div>
-                    <div class="qFrameTop">
-                    </div>
-                    <div class="qFrameMiddle" id="middleFrame">
-                        <div class="quranText" id="quranText" style="text-align: justify; font-family: 'KFGQPC Uthman Taha Naskh', KFGQPC_Naskh; font-size: 1.15em; font-weight: normal; display: block;"><div class="suraHeaderFrame"><div class="suraHeaderText">سورة مريم</div></div><div class="ayaText besm">بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ </div>
-                            <%= yield :quran_text %>
-                        </div>
-                    </div>
-                    <div class="qFrameBottom">
-                    </div>
-                    <div class="quranPageFooter">
-                        <a class="arrow-link arrow-left" href="javascript:changePage('left')" original-title="">◄</a>
-                        &nbsp;<span class="pageNumber">٣٠٥</span>&nbsp;
-                        <a class="arrow-link arrow-right" href="javascript:changePage('right')" original-title="">►</a>
-                    </div>
-                </div>
-            </div>
+        <div id="quran-content" class="floatEnd">
+          <%= yield :quran_text %>
         </div>
+
+
     </body>
 </html>

@@ -6,7 +6,7 @@ class QuranController < ApplicationController
 
     # retrieve sura number and reqAya from user request
     reqSura = 4
-    reqAya = 32
+    reqAya = 28
     @page = quran_data.search("page[sura=\"#{reqSura}\"]").select{|page| page['aya'].to_i <= reqAya}.last['index']
     nextPage = @page.to_i + 1
     @nextPageSura = quran_data.search("page[index=\"#{nextPage}\"]").first['sura']
