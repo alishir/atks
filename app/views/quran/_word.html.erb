@@ -1,4 +1,4 @@
 <span id="<%= id %>" class="span-ayaWord" data-selected-background-color="#c4ecbd" data-original-background-color="#f7fce3">
-  <%= link_to word.to_s, fetch_info_path(:word => word), :class => "ayaWord",
+  <%= link_to word.to_s, sarf_token_path(:word => word), :class => "ayaWord",
               :data => {:selected_bg_color => "#c4ecbd", :original_bg_color => "#f7fce3"},  :remote => true %>
 </span>
