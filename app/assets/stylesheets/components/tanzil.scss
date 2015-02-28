@@ -4,12 +4,12 @@
   outline: 0;
 }
 
-body {
-  font-family: Arial,Helvetica,sans-serif;
-  font-size: 12px;
+//body {
+//  font-family: Arial,Helvetica,sans-serif;
+//  font-size: 12px;
 //  background: #F6F6F6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAAKCAMAAAB7ccqXAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAtUExURdDQ0NbW1t3d3eTk5MzMzOnp6dzc3O/v79XV1fHx8fT09OLi4uvr6/b29v///5ey53AAAABASURBVHja7NPZAcAQFACw10MVZf9xfdUSkh0S/Vdzas8bAzZ2x3FeX1ktQhAQBAQBQUAQEAQEAUFAENgvyBRgAPwjsEAEXWYMAAAAAElFTkSuQmCC) repeat-y 50% 0;
-  line-height: normal;
-}
+//  line-height: normal;
+//}
 
 p,ul,ol {
   margin: 0.5em 0px 1em;
@@ -23,14 +23,14 @@ img {
   border: none;
 }
 
-a {
-  color: blue;
-  text-decoration: none;
-}
+//a {
+//  color: blue;
+//  text-decoration: none;
+//}
 
-a:hover {
-  color: blue;
-}
+//a:hover {
+//  color: blue;
+//}
 
 select,button,input {
   font-family: Tahoma;
@@ -87,12 +87,12 @@ input[type=checkbox],input[type=radio] {
   -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-#container {
-  width: 768px;
-  margin: 0 auto;
-  padding: 0;
-  display: block;
-}
+//#container {
+//  width: 768px;
+//  margin: 0 auto;
+//  padding: 0;
+//  display: block;
+//}
 
 #body-content {
   width: 768px;

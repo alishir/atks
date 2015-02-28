@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Atks</title>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
-        <%= stylesheet_link_tag    'components/tanzil', media: 'all', 'data-turbolinks-track' => true %>
-        <%= javascript_include_tag 'components/tanzil', 'data-turbolinks-track' => true %>
-        <%= stylesheet_link_tag    'quran', media: 'all', 'data-turbolinks-track' => true %>
-        <%= javascript_include_tag  'quran', 'data-turbolinks-track' => true %>
+<head>
+  <title>Atks</title>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
 
-        <%= csrf_meta_tags %>
-    </head>
-    <body>
+  <%= stylesheet_link_tag    'components/tanzil', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'components/tanzil', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'quran', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag  'quran', 'data-turbolinks-track' => true %>
 
-        <!--
-        <div id="side-content" class="floatEnd">
-          <%= yield :page_meta %>
-        </div>
-        -->
 
-        <!--AJAX + Partial-->
-        <div id="sarf-content" class="floatEnd">
-          <!--<%= yield :atks_sarf %>-->
-        </div>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<a href="www.google.com" class="btn btn-large btn-primary"> Some Text to test bootstrap</a>
+<div id="main-container" class="container">
+  <div class="row">
 
-        <div id="quran-content" class="floatEnd">
-          <%= yield :quran_text %>
-        </div>
+    <div id="quran-content" class="col-xs-9">
+      <%= yield :quran_text %>
+    </div>
+    <!--AJAX + Partial-->
+    <div id="sarf-content" class="col-xs-2">
+      <!--<%= yield :atks_sarf %>-->
+    </div>
+    <div id="side-content" class="span4 floatEnd">
 
-    </body>
+    </div>
+
+  </div>
+</div>
+</body>
 </html>

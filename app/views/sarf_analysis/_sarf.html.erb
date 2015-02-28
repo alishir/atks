@@ -1,3 +1,10 @@
-<h2>
-  <%= @result %>
-</h2>
+<span class="sarf.analyze_token">
+  <ul class="nav nav-tabs">
+  <% if @result.kind_of?(Array) %>
+  <% @result.each_with_index do |res, index| %>
+            <!--<%= render partial: 'single_token_result', locals: {token_result: res} %>-->
+        <li class="<%= 'active' if index == 0 %>" id="<%= index %>"><%= res[:pos] %></li>
+  <% end %>
+  </ul>
+        <% end %>
+</span>
