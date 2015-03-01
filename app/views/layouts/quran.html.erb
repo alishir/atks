@@ -7,28 +7,29 @@
 
 
   <%= stylesheet_link_tag    'components/tanzil', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'components/tanzil', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'quran', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag  'quran', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'components/quran', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag  'components/quran', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'components/sarf_analysis', 'data-turbolinks-track' => true %>
 
 
   <%= csrf_meta_tags %>
 </head>
 <body>
-<a href="www.google.com" class="btn btn-large btn-primary"> Some Text to test bootstrap</a>
 <div id="main-container" class="container">
   <div class="row">
-
-    <div id="quran-content" class="col-xs-9">
-      <%= yield :quran_text %>
-    </div>
     <!--AJAX + Partial-->
-    <div id="sarf-content" class="col-xs-2">
+    <div id="sarf-content" class="col-md-4">
       <!--<%= yield :atks_sarf %>-->
     </div>
-    <div id="side-content" class="span4 floatEnd">
+
+    <div id="quran-content" class="col-md-6">
+      <%= yield :quran_text %>
+    </div>
+
+    <div id="test-content" class="col-md-4">
 
     </div>
+
 
   </div>
 </div>

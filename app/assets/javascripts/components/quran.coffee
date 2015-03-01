@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 paintIt = (element, backgroundColor, textColor) ->
-  console.log($(".ayaWord[data-selected-bg-color]"))
+#  console.log($(".ayaWord[data-selected-bg-color]"))
   for word in $(".ayaWord[data-selected-bg-color]")
     word.style.backgroundColor = $(word).data("original-bg-color")
   element.style.backgroundColor = backgroundColor

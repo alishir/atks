@@ -1,10 +1,33 @@
 <span class="sarf.analyze_token">
-  <ul class="nav nav-tabs">
-  <% if @result.kind_of?(Array) %>
-  <% @result.each_with_index do |res, index| %>
-            <!--<%= render partial: 'single_token_result', locals: {token_result: res} %>-->
-        <li class="<%= 'active' if index == 0 %>" id="<%= index %>"><%= res[:pos] %></li>
-  <% end %>
-  </ul>
-        <% end %>
+  <div role="tabpanel">
+    <ul class="nav nav-pills" role="tablist" id="sarfResutlTabs">
+      <% token_tab_id_prefix = 'sarfp' %>
+      <% if @result.kind_of?(Hash) %>
+          <% @result = [@result] %>
+      <% end %>
+      <% if @result.kind_of?(Array) %>
+          <% @result.each_with_index do |res, index| %>
+
+              <% tab_id =  token_tab_id_prefix + index.to_s%>
+              <li role="presentation" class="<%= 'active' if index == 0 %>">
+                <a id="<%= tab_id  + 'tab' %>" aria-expanded="true"
+                   aria-controls="<%= tab_id %>" role="tab"
+                   data-toggle="pill" href="<%= '#' + tab_id %>">
+
+                  <%= t res[:pos] %>
+                </a>
+              </li>
+          <% end %>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <% @result.each_with_index do |res, index| %>
+                <% tab_id =  token_tab_id_prefix + index.to_s %>
+                <div id="<%= tab_id %>" role="tabpanel"
+                     aria-labelledby="<%= tab_id + 'tab' %>" class="tab-pane <%= 'active' if index == 0 %>">
+                  <%= render partial: 'single_token_result', locals: {token_result: res} %>
+                </div>
+            <% end %>
+          </div>
+      <% end %>
+      </div>
 </span>

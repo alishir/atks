@@ -1,3 +1,8 @@
 fa:
   hello: "سلام بر تو"
-  stem: "ریشه"
+  stem: "پایه"
+  ESM_MAF3OOL_MAZEED: "اسم مفعول مزید"
+  MASDAR_MEEMEY_MAZEED: "مصدر میمی مزید"
+  pattern: "وزن"
+  diac_token: "کلمه"
+  root: "ریشه"

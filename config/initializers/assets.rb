@@ -9,6 +9,6 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.scss, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile += %w( components/tanzil.css )
-Rails.application.config.assets.precompile += %w( components/tanzil.js )
 Rails.application.config.assets.precompile += %w( components/quran.css )
 Rails.application.config.assets.precompile += %w( components/quran.js )
+Rails.application.config.assets.precompile += %w( components/sarf_analysis.js )
