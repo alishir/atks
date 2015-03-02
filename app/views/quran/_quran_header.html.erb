@@ -1,13 +1,19 @@
 <div class="quranPageHeader ui-helper-clearfix">
   <div style="float: left; width: 180px; text-align: left;">
-    <span id="suraName">سورة مريم</span></div>
+    <span id="suraName">
+      <%= @suraName %>
+    </span>
+  </div>
   <div style="float: left; width: 130px;">
     <a class="arrow-link arrow-left" href="javascript:changePage('left')" original-title="">◄</a>
     &nbsp;<span class="pageNumber"><%= @page %></span>&nbsp;
     <a class="arrow-link arrow-right" href="javascript:changePage('right')" original-title="">►</a>
   </div>
+
+  <!-- TODO add juze information
   <div style="float: right">
     <span id="juzName">الجزء السادس عشر</span>
   </div>
+  -->
 </div>
 <div class="qFrameTop"></div>

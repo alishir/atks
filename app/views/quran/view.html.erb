@@ -20,15 +20,19 @@
 <% content_for :quran_text do %>
         <div id="quran-tab" class="main-tab quran" style="font-size: 19px; display: block; margin:auto 0;">
 
-          <%= render partial: "quran/quran_header", locals: {page: @page} %>
+          <%= render partial: "quran/quran_header", locals: {page: @page, suraName: @suraName} %>
 
           <!-- TODO clean this section-->
           <div class="qFrameMiddle" id="middleFrame">
-            <div class="quranText" id="quranText" style="text-align: justify; font-family: 'KFGQPC Uthman Taha Naskh', KFGQPC_Naskh; font-size: 1.15em; font-weight: normal; display: block;">
+            <div class="quranText" id="quranText">
+              <!--
               <div class="suraHeaderFrame">
                 <div class="suraHeaderText">سورة مريم</div>
               </div>
-              <div class="ayaText besm">بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ </div>
+              <div class="ayaText besm">
+                بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
+              </div>
+              -->
               <% @ayat.each do |aya| %>
                   <% aya_id = @sura.to_s + '-' + aya['index'] %>
                   <%= render partial: "aya", locals: {aya: aya, aya_id: aya_id} %>
