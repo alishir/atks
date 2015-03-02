@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'quran#view'
   get '/sarf_token' => 'sarf_analysis#analyze_token', as: 'sarf_token'
+  get '/view_page' => 'quran#view_page', as: 'view_page'
 
 
   # Example of regular route:

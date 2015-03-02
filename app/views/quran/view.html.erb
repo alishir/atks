@@ -1,26 +1,9 @@
-<% if false %>
-<% content_for :quran_text do %>
-    <% @ayat.each do |aya| %>
-        <% aya_id = @sura.to_s + '-' + aya['index'] %>
-            <%= render partial: "aya", locals: {aya: aya, aya_id: aya_id} %>
-    <% end %>
-<% end %>
-<% end %>
-
-<% if false %>
-<% content_for :page_meta do %>
-    <h2>Page: <%= @page %></h2>
-    <br/>
-    <h2>nextPageSura: <%= @nextPageSura %></h2>
-    <br/>
-    <h2>nextPageAya: <%= @nextPageAya %></h2>
-<% end %>
-<% end %>
-
 <% content_for :quran_text do %>
         <div id="quran-tab" class="main-tab quran" style="font-size: 19px; display: block; margin:auto 0;">
 
-          <%= render partial: "quran/quran_header", locals: {page: @page, suraName: @suraName} %>
+          <div  id="quranPageHeader">
+            <%= render partial: "quran/quran_header", locals: {page: @page, suraName: @suraName} %>
+          </div>
 
           <!-- TODO clean this section-->
           <div class="qFrameMiddle" id="middleFrame">
@@ -33,14 +16,14 @@
                 بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
               </div>
               -->
-              <% @ayat.each do |aya| %>
-                  <% aya_id = @sura.to_s + '-' + aya['index'] %>
-                  <%= render partial: "aya", locals: {aya: aya, aya_id: aya_id} %>
-              <% end %>
+              <%= render partial: "quran/ayat", locals: {ayat: @ayat} %>
+
             </div>
           </div>
 
+          <div id="quranPageFooter">
           <%= render partial: "quran/quran_footer", locals: {page: @page} %>
+          </div>
 
         </div>
 <% end %>

@@ -1,0 +1,4 @@
+<% @ayat.each do |aya| %>
+    <% aya_id = @sura.to_s + '-' + aya['index'] %>
+    <%= render partial: "aya", locals: {aya: aya, aya_id: aya_id} %>
+<% end %>

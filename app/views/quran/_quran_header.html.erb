@@ -5,9 +5,13 @@
     </span>
   </div>
   <div style="float: left; width: 130px;">
-    <a class="arrow-link arrow-left" href="javascript:changePage('left')" original-title="">◄</a>
+    <!--<a class="arrow-link arrow-left" href="javascript:changePage('left')" original-title="">◄</a>-->
+    <%= link_to '◄', view_page_path(:page => @page.to_i + 1),
+                :class => "arrow-link arrow-left", :remote => true %>
     &nbsp;<span class="pageNumber"><%= @page %></span>&nbsp;
-    <a class="arrow-link arrow-right" href="javascript:changePage('right')" original-title="">►</a>
+    <!--<a class="arrow-link arrow-right" href="javascript:changePage('right')" original-title="">►</a>-->
+    <%= link_to '►', view_page_path(:page => @page.to_i - 1),
+                :class => "arrow-link arrow-left", :remote => true %>
   </div>
 
   <!-- TODO add juze information

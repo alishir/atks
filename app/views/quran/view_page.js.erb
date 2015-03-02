@@ -1,0 +1,14 @@
+// TODO incomplete function
+$("#quranText").html(" \
+<%= escape_javascript(render partial: 'quran/ayat', locals: {ayat: @ayat} ) %> \
+");
+
+$("#quranPageHeader").html("\
+<%= escape_javascript(render partial: 'quran/quran_header', \
+        locals: {page: @page, suraName: @suraName} ) %> \
+");
+
+$("#quranPageFooter").html("\
+<%= escape_javascript(render partial: 'quran/quran_footer', \
+        locals: {page: @page} ) %> \
+");

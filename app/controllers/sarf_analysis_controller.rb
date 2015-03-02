@@ -38,6 +38,7 @@ class SarfAnalysisController < ApplicationController
     end
 
     logger.info "result:" + @result.to_s
+
     respond_to do |format|
       format.js
     end
